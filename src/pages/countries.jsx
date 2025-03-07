@@ -33,7 +33,7 @@ const Countries = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold text-center mb-4">Countries List</h1>
+      <h1 className="text-3xl font-bold text-center mb-4">Countries</h1>
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
         <input
@@ -41,7 +41,7 @@ const Countries = () => {
           placeholder="Search for a country..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border p-2 rounded-lg shadow-sm text-lg w-full max-w-md"
+          className="border p-2 rounded-lg shadow-sm text-lg w-full max-w-md" 
         />
 
         <select
@@ -58,10 +58,10 @@ const Countries = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
         {filteredCountries.length > 0 ? (
           filteredCountries.map((country) => (
-            <div key={country.cca3} className="border p-4 rounded-lg shadow-md">
+            <div key={country.cca3} className="border p-4 rounded-lg shadow-md bg-emerald-900">
               <img
                 src={country.flags.svg}
                 alt={country.name.common}
